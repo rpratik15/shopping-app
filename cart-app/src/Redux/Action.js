@@ -1,6 +1,7 @@
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const FETCH_DATA="FETCH_DATA";
+export const CLEAR_ALL="CLEAR_ALL";
 
 export const fetchAction=(payload)=>{
     return{
@@ -35,3 +36,10 @@ export const addToCartAction = (payload) => {
       payload: payload,
     };
   };
+
+  export const clearAllAction=()=>{
+    return{
+        type:CLEAR_ALL
+       
+    }
+}

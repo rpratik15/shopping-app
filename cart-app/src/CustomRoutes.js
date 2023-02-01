@@ -7,6 +7,7 @@ import Cart from "./Components/Cart/Cart";
 
 
 const CustomRoutes = () => {
+   
   return (
     <Routes>
       <Route path="/" element={<Home />} />

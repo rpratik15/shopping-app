@@ -1,12 +1,13 @@
 import React from 'react'
 
-function List() {
+function List({items}) {
+    console.log(items)
   return (
     <>
-    <div>List 1</div>
-    <div>List 1</div>
-    <div>List 1</div>
-    <div>List 1</div>
+    <span>List 1</span>
+    <span>List 2</span>
+    <span>List 3</span>
+    <span>List 1</span>
     </>
   )
 }

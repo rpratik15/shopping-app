@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_FROM_CART, FETCH_DATA } from './Action'
+import { ADD_TO_CART, REMOVE_FROM_CART, FETCH_DATA,CLEAR_ALL } from './Action'
 import { initialState } from './Store'
 
 const rootReducer = (state = initialState, action) => {
@@ -10,7 +10,7 @@ const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TO_CART:
             //  console.log(state?.products)
-            // console.log(action.payload)
+            // console.log(state.cart.length)
 
             if (state.cart.length === 0) {
                 currentItem = state?.products?.filter((product) => {
@@ -48,12 +48,12 @@ const rootReducer = (state = initialState, action) => {
 
        
         case REMOVE_FROM_CART:
-           console.log(action.payload)
+        //    console.log(action.payload)
             newUpdatedCart = state.cart.filter((cartItem) => {
                 if (cartItem.id !== action.payload) return cartItem;
                 else currentItem = { ...cartItem };
               });
-              console.log(newUpdatedCart)
+            //   console.log(newUpdatedCart)
               return {
                 ...state,
                 cart: [...newUpdatedCart]
@@ -65,7 +65,12 @@ const rootReducer = (state = initialState, action) => {
             // state.products=[action.payload]
             // console.log(action.payload)
             return { ...state, products: action.payload };
-
+        case CLEAR_ALL:
+            alert("Items have been checked out")
+            return {
+                ...state,
+                cart:[]
+            }
         default:
             return state;
 

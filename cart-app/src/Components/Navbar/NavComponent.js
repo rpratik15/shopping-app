@@ -1,8 +1,10 @@
 import React from 'react'
 import {Navbar,Container,Nav} from 'react-bootstrap'
 import { Link} from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 function NavComponent() {
+    const store = useSelector((state) => state);
    
   return (
      <Navbar bg="dark" variant="dark">
@@ -11,7 +13,7 @@ function NavComponent() {
          
           <Nav className="me-2">
             < Link className="navv-link nav-link " to='/' >Home</Link>
-            < Link className="navv-link nav-link" to='cart'>Cart</Link>
+            < Link className="navv-link nav-link" to='cart'>Cart({store.cart.length})</Link>
          
          
           </Nav>

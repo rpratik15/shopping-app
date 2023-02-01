@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
+import {  useDispatch } from 'react-redux'
+import {clearAllAction} from '../../Redux/Action'
 
 import Card from "../UI/Card"
 import "./Cart.css";
@@ -8,6 +9,11 @@ import List from '../UI/List'
 
 const Cart = () => {
   const store = useSelector((state) => state);
+const dispatch=useDispatch()
+
+  const handleCheckout=()=>{
+   dispatch(clearAllAction())
+  }
     // console.log(store?.cart)
   return (
     <>
@@ -23,6 +29,7 @@ const Cart = () => {
             title={cartItem?.title}
             img={cartItem?.thumbnail}
             price={cartItem?.price}
+            id={cartItem?.id}
              btnText={"Remove From Cart"}
           />
         );
@@ -30,8 +37,8 @@ const Cart = () => {
     </div>
     <div className="checklist" >
         <h4>Checkout List</h4>
-        <List/>
-        <button>Click To Checkout</button>
+        <List items={store.cart}/>
+        <button onClick={handleCheckout}>Click To Checkout</button>
     </div>
     </div>
     </>
