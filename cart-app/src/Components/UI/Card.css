@@ -1,0 +1,62 @@
+.card-box {
+    margin: 20px;
+    display: grid;
+    place-items: center;
+    width: max-content;
+    border-radius: 3px;
+    /* background: #eee; */
+    box-shadow: 0 8px 8px -4px rgb(39, 43, 48);
+    padding: 7px;
+    height: 420px;
+   
+  }
+  
+  .card-body {
+    /* padding: 13px; */
+    display: grid;
+    place-items: left;
+  }
+  
+  /* .card-img {
+    width: max-content;
+    height: 231px;
+  } */
+  
+  .card-img > img {
+    object-fit:fill;
+    width: 250px;
+    height: 200px;
+  }
+  
+  .card-item-title {
+    padding: 20px 0;
+    width: calc(300px - 22px);
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1em;
+    margin-left: 17px;
+    /* margin: 5px; */
+    text-align: initial;
+   
+  }
+  
+  .card-item-price {
+    padding-bottom: 20px;
+    font-weight: 600;
+    color: rgb(2, 20, 2);
+    margin-left: 17px;
+   
+    text-align: initial;
+  
+  }
+  
+  .add-to-cart-btn {
+    padding: 7px 11px;
+    outline: none;
+    background-color: rgb(1, 7, 14);
+    /* border: 1px solid dodgerblue; */
+    color: white;
+
+    /* border-radius: 3px; */
+    /* margin-top: 11px; */
+  }

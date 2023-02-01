@@ -1,0 +1,21 @@
+.cart-box
+{
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+}
+.main-div
+{
+    display: flex;
+    margin: auto;
+}
+.checklist
+{
+    color: white;
+    background-color: black;
+    height:max-content;
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+
+}
